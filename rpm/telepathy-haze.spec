@@ -14,7 +14,7 @@ Release:    1
 Group:      Applications/Communications
 License:    GPLv2+
 URL:        http://developer.pidgin.im/wiki/Telepathy
-Source0:    http://telepathy.freedesktop.org/releases/%{name}/%{name}-%{version}.tar.gz
+Source0:    http://anongit.freedesktop.org/git/telepathy/%{name}.git/
 Source100:  telepathy-haze.yaml
 BuildRequires:  pkgconfig(purple)
 BuildRequires:  pkgconfig(telepathy-glib)
