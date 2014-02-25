@@ -33,7 +33,7 @@ others will probably work too.
 
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q -n %{name}-%{version}/%{name}
 
 # >> setup
 # << setup
