@@ -6,7 +6,7 @@ Group: Applications/Communications
 License: GPLv2+
 URL: http://developer.pidgin.im/wiki/Telepathy
 Sources:
-    - %{name}-%{version}.tar.bz2
+    - http://telepathy.freedesktop.org/releases/telepathy-haze/%{name}-%{version}.tar.gz
 Description: | 
 
     telepathy-haze is a connection manager built around libpurple, the core of
