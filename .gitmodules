@@ -1,0 +1,3 @@
+[submodule "telepathy-haze"]
+	path = telepathy-haze
+	url = http://anongit.freedesktop.org/git/telepathy/telepathy-haze.git
