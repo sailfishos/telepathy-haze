@@ -7,6 +7,7 @@ Group:      Applications/Communications
 License:    GPLv2+
 URL:        http://developer.pidgin.im/wiki/Telepathy
 Source0:    http://telepathy.freedesktop.org/releases/telepathy-haze/%{name}-%{version}.tar.gz
+Patch0:	    0001-telepathy-haze-Reword-comment-for-Wimplicit-fallthro.patch
 BuildRequires:  pkgconfig(purple)
 BuildRequires:  pkgconfig(telepathy-glib)
 BuildRequires:  pkgconfig(libxslt)
@@ -25,6 +26,7 @@ others will probably work too.
 
 %prep
 %setup -q -n %{name}-%{version}/%{name}
+%patch0 -p1
 
 %build
 %reconfigure --disable-static
