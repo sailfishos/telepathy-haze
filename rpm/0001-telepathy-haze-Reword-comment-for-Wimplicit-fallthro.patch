@@ -1,0 +1,26 @@
+From 6e9eefa85036d66d0f92222ded13f9fee26b150d Mon Sep 17 00:00:00 2001
+From: Santtu Lakkala <santtu.lakkala@jolla.com>
+Date: Fri, 22 Nov 2019 09:56:54 +0200
+Subject: [PATCH] [telepathy-haze] Reword comment for -Wimplicit-fallthrough=3.
+ Contributes to JB#47985
+
+---
+ src/im-channel.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/im-channel.c b/src/im-channel.c
+index dd4cf53..d21c92c 100644
+--- a/src/im-channel.c
++++ b/src/im-channel.c
+@@ -312,7 +312,7 @@ haze_im_channel_send (GObject *obj,
+       break;
+     case TP_CHANNEL_TEXT_MESSAGE_TYPE_AUTO_REPLY:
+       flags |= PURPLE_MESSAGE_AUTO_RESP;
+-      /* deliberate fall-through: */
++      /* intentional fall-through */
+     case TP_CHANNEL_TEXT_MESSAGE_TYPE_NORMAL:
+       text = g_strdup (text);
+       break;
+-- 
+2.20.1
+
