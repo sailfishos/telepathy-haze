@@ -3,11 +3,11 @@ Name:       telepathy-haze
 Summary:    A multi-protocol Libpurple connection manager for Telepathy
 Version:    0.8.0
 Release:    1
-Group:      Applications/Communications
 License:    GPLv2+
 URL:        http://developer.pidgin.im/wiki/Telepathy
 Source0:    http://telepathy.freedesktop.org/releases/telepathy-haze/%{name}-%{version}.tar.gz
-Patch0:	    0001-telepathy-haze-Reword-comment-for-Wimplicit-fallthro.patch
+Patch0:     0001-telepathy-haze-Reword-comment-for-Wimplicit-fallthro.patch
+Patch1:     0001-Allow-build-with-glib2-2.62.4.patch
 BuildRequires:  pkgconfig(purple)
 BuildRequires:  pkgconfig(telepathy-glib)
 BuildRequires:  pkgconfig(libxslt)
@@ -23,10 +23,8 @@ Ultimately, any protocol supported by libpurple will be supported by
 telepathy-haze; for now, XMPP, MSN and AIM are known to work acceptably, and
 others will probably work too.
 
-
 %prep
-%setup -q -n %{name}-%{version}/%{name}
-%patch0 -p1
+%autosetup -p1 -n %{name}-%{version}/%{name}
 
 %build
 %reconfigure --disable-static
@@ -38,7 +36,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-%doc COPYING NEWS
+%license COPYING
 %{_libexecdir}/telepathy-haze
 %{_datadir}/dbus-1/services/*.haze.service
 %{_mandir}/man8/telepathy-haze.8*
