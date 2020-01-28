@@ -1,0 +1,27 @@
+From 7393a9f113f49f13cf7bd94f2f89828695be93ed Mon Sep 17 00:00:00 2001
+From: Matti Kosola <matti.kosola@jolla.com>
+Date: Mon, 27 Jan 2020 08:03:02 +0000
+Subject: [PATCH] Allow build with glib2 2.62.4.
+
+Signed-off-by: Matti Kosola <matti.kosola@jolla.com>
+---
+ configure.ac | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/configure.ac b/configure.ac
+index 3dbf15d..53246cc 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -61,7 +61,8 @@ TP_COMPILER_WARNINGS([ERROR_CFLAGS], [test x$release = xno],
+    pointer-arith \
+    format-security \
+    init-self],
+-  [missing-field-initializers \
++  [deprecated-declarations \
++   missing-field-initializers \
+    unused-parameter])
+ AC_SUBST(ERROR_CFLAGS)
+ 
+-- 
+1.8.3-rc3
+
